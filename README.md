@@ -43,7 +43,6 @@ While revisiting other wagons, user's memory starts to trick him - not only they
 _mechanics: black inaccessible blocks spawning and sporadically growing >> OOP_
 ##### Stop
 Train comes to a stop; user gets off, game ends.
-\ 
 
 ### Time
 Time is CRUTIAL and not at all reliable here:
@@ -61,7 +60,7 @@ Can confirm - will use p5.js
 - interactions - I'd like to include in the characters OOP classes a key enabling interacting with objects (thus triggering dialogues or other stuff)
 
 ### Aesthetics | Subject to Updates/Changes
-Simple simple. Image files coming soon.
+Simple simple. Image files coming soon.\ 
 -UPDATE 16/08-
 _(Heh, I lied)_
 I'm following what seems to be a pattern and going with what I fantasize as a sort of arcade (but mild and quieter) - not really but let's pretend; a smaller canvas may result "downgraded" if the user is (most likely) used to full-screened content, yet I truly do find this format nostalgic and simple - fitting my project.
@@ -69,7 +68,7 @@ I'm following what seems to be a pattern and going with what I fantasize as a so
 ### Sounds | Subject to Updates/Changes
 I plan:
 - 'beep bop boop' sounds - for lack of better term - for interactions/voices and SFXs
-- actual soundtracks, though I fucking sucks at creating those - and stealing some doesn't seem too appealing - so idk. Maybe there's guides online or smth - worst case scenario, go for easy/repeated chords and scales.
+- actual soundtracks, though I fucking sucks at creating those - and stealing some doesn't seem too appealing - so idk. Maybe there's guides online or smth - worst case scenario, go for easy/repeated chords and scales.\
 -UPDATE (16/08)-
 - I thought about the envisioned sounds planned for this program and my incapacity to create soundtracks - I think I found a plausible solution: p5 sound library >:D
 I _think_ it'd fit nicely the project and speculative design' vibes, in addition to being quite easy and fun to work with. It _might_ result a bit annoying - kind of like a triggering ringing (especially the sawtooth tool or smth); the only thing to do is try it out and see. Further updates will follow (albeit designing the sounds will be left among the last tasks, so...).
