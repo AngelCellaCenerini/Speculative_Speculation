@@ -40,10 +40,10 @@ _mechanics: dialogues >> JSON_
 SA disappears (no graphic deaths here) or smth; user can look around in wagons, but won't find anyone
 ##### Grief
 While revisiting other wagons, user's memory starts to trick him - not only they start to forget, they remember things differently\
-_mechanics: black inaccessible blocks spawning and sporadically growing >> OOP_\
+_mechanics: black inaccessible blocks spawning and sporadically growing >> OOP_
 ##### Stop
 Train comes to a stop; user gets off, game ends.
-\\
+\ 
 
 ### Time
 Time is CRUTIAL and not at all reliable here:
@@ -75,7 +75,7 @@ I plan:
 I _think_ it'd fit nicely the project and speculative design' vibes, in addition to being quite easy and fun to work with. It _might_ result a bit annoying - kind of like a triggering ringing (especially the sawtooth tool or smth); the only thing to do is try it out and see. Further updates will follow (albeit designing the sounds will be left among the last tasks, so...).
 
 ### Coding the Program | Progress & Phases
--16/08-
+-16/08-\
 Basic set up:
 - included p5 and p5 sound libraries( > more in 'Sounds'), as well as .json file for dialogues. I'm currently hoping to adapt my dialogues system from the CART263 - Final Project, in which the lines are contained in one single file and displayed depending on the current state; although here the lines are numerous so it'll require a bit more testing. Updates required.
 - adjusted CSS in order to center canvas and change page's bg color (yes I am adopting the usual -probably unappreciated- technique of a canvas smaller than the screen > more in 'aesthetics').
