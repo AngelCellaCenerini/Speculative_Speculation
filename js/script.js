@@ -9,14 +9,21 @@ Plan & Discussion: see README.md for details
 */
 
 "use strict";
-
+// Avatar
+let avatar = undefined;
+let avatarImage = undefined;
+let avatarAnimation = undefined;
+// States
 let state = 'intro'; // Intro, TitleScreen, Wagons(4), Ending - OOP will construct the states
 
 /**
 Preloading .json file (dialogues) & graphic elements
 */
 function preload() {
-
+  // JSON file (dialogues)
+  // Visual Elements
+  avatarImage = loadImage(`assets/images/temporary_avatar.png`);
+  avatarAnimation = loadImage(`assets/images/temporary_animation.png`);
 }
 
 /**
@@ -26,6 +33,10 @@ function setup() {
 
   // Set Up Canvas Size
   createCanvas(800, 600);
+
+  // Set Up User's Avatar
+  // Create Object & Assign Icon
+  avatar = new Avatar(avatarImage, avatarAnimation);
 
 }
 
@@ -39,6 +50,9 @@ function draw() {
 
   // States
   if ( state === 'intro' ){
+
+    // checking Avatar
+    avatar.update();
 
   }
   else if ( state === 'titleScreen' ){

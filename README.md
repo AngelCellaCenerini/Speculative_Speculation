@@ -77,7 +77,8 @@ I _think_ it'd fit nicely the project and speculative design' vibes, in addition
 ### Coding the Program | Progress & Phases
 -16/08-
 Basic set up:
-- included p5 and p5 sound libraries( > more in 'Sounds'), as well as .json file for dialogues. I'm currently hoping to adapt my dialogues system from the CART263 - Final Project, in which the lines are contained in one single file and displayed depending on the current state; although here the lines are numerous so it'll require a bit more testing. Updates required;
-- adjusted CSS in order to center canvas and change page's bg color (yes I am adopting the usual -probably unappreciated- technique of a canvas smaller than the screen > more in 'aesthetics');
+- included p5 and p5 sound libraries( > more in 'Sounds'), as well as .json file for dialogues. I'm currently hoping to adapt my dialogues system from the CART263 - Final Project, in which the lines are contained in one single file and displayed depending on the current state; although here the lines are numerous so it'll require a bit more testing. Updates required.
+- adjusted CSS in order to center canvas and change page's bg color (yes I am adopting the usual -probably unappreciated- technique of a canvas smaller than the screen > more in 'aesthetics').
 - set up very basic settings in main script such as canvas size, bg color (a dark grey > again, 'aesthetics');
-- set up states (they'll probably be subjected to change throughout the project); it personally helps me in having a very basic skeleton/bigger picture before tackling the single more specific tasks
+- set up states (they'll probably be subjected to change throughout the project); it personally helps me in having a very basic skeleton/bigger picture before tackling the single more specific tasks.
+- set up avatar as Class; directed by the arrow keys, it possesses both an idle icon and moving animation (currently under construction, so for now it's only creepy and irrelevant .pngs) and is constrained to the canvas. This, however, might change - after all, the avatar will mostly move within the wagons which, in turn, will...'expand', so yeah, the constraining method might be removed further ahead.
