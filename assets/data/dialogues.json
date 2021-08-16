@@ -1,0 +1,14 @@
+
+{
+ "description": "Dialogues for program; organized by states",
+ "sources": [ "my cringyness in social interactions"],
+ "program_dialogues": {
+   "intro":  ["bla bla", "bla"],
+   "titleScreen":  ["bla bla", "bla"],
+   "firstWagon": ["bla bla", "bla"],
+   "secondWagon": ["bla bla", "bla"],
+   "thirdWagon": ["bla bla", "bla"],
+   "fourthWagon": ["bla bla", "bla"],
+   "ending": ["bla bla", "bla"]
+ }
+}

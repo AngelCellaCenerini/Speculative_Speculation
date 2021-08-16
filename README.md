@@ -62,8 +62,22 @@ Can confirm - will use p5.js
 
 ### Aesthetics | Subject to Updates/Changes
 Simple simple. Image files coming soon.
+-UPDATE 16/08-
+_(Heh, I lied)_
+I'm following what seems to be a pattern and going with what I fantasize as a sort of arcade (but mild and quieter) - not really but let's pretend; a smaller canvas may result "downgraded" if the user is (most likely) used to full-screened content, yet I truly do find this format nostalgic and simple - fitting my project.
 
 ### Sounds | Subject to Updates/Changes
 I plan:
 - 'beep bop boop' sounds - for lack of better term - for interactions/voices and SFXs
 - actual soundtracks, though I fucking sucks at creating those - and stealing some doesn't seem too appealing - so idk. Maybe there's guides online or smth - worst case scenario, go for easy/repeated chords and scales.
+-UPDATE (16/08)-
+- I thought about the envisioned sounds planned for this program and my incapacity to create soundtracks - I think I found a plausible solution: p5 sound library >:D
+I _think_ it'd fit nicely the project and speculative design' vibes, in addition to being quite easy and fun to work with. It _might_ result a bit annoying - kind of like a triggering ringing (especially the sawtooth tool or smth); the only thing to do is try it out and see. Further updates will follow (albeit designing the sounds will be left among the last tasks, so...).
+
+### Coding the Program | Progress & Phases
+-16/08-
+Basic set up:
+- included p5 and p5 sound libraries( > more in 'Sounds'), as well as .json file for dialogues. I'm currently hoping to adapt my dialogues system from the CART263 - Final Project, in which the lines are contained in one single file and displayed depending on the current state; although here the lines are numerous so it'll require a bit more testing. Updates required;
+- adjusted CSS in order to center canvas and change page's bg color (yes I am adopting the usual -probably unappreciated- technique of a canvas smaller than the screen > more in 'aesthetics');
+- set up very basic settings in main script such as canvas size, bg color (a dark grey > again, 'aesthetics');
+- set up states (they'll probably be subjected to change throughout the project); it personally helps me in having a very basic skeleton/bigger picture before tackling the single more specific tasks
