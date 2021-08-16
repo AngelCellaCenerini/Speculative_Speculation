@@ -1,7 +1,7 @@
 # Speculative_Speculation
 Documenting and storing the design and building processes for the Speculative Play project (V00717).
 
-15-19/07/2021 | Introductive Ranting\  
+15-19/07/2021 | Introductive Ranting  
 [Exploring Speculative Design & Possible Interpretations of Theme](https://docs.google.com/document/d/1tAFpLuu1fsyRhrwTuMa5tBI6hm-bwEVeyZS5s5nHQAU/edit?usp=sharing)        
 
 
