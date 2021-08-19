@@ -3,7 +3,11 @@
  "description": "Dialogues for program; organized by states",
  "sources": [ "my cringyness in social interactions"],
  "program_dialogues": {
-   "intro":  ["bla bla", "bla"],
+   "intro":  ["Experience the sincerity of old friendships and the sweet lullaby of true grief.",
+ "Tired of crossing renewals? No worries, here you'll find closure.",
+ "Take a break from the present, begin your own journey!",
+ "Embark upon this new phase in life.",
+"Your friend is already waiting for you, how exciting!"],
    "titleScreen":  ["bla bla", "bla"],
    "firstWagon": ["bla bla", "bla"],
    "secondWagon": ["bla bla", "bla"],

@@ -60,7 +60,7 @@ Can confirm - will use p5.js
 - interactions - I'd like to include in the characters OOP classes a key enabling interacting with objects (thus triggering dialogues or other stuff)
 
 ### Aesthetics | Subject to Updates/Changes
-Simple simple. Image files coming soon.\ 
+Simple simple. Image files coming soon.\
 -UPDATE 16/08-
 _(Heh, I lied)_
 I'm following what seems to be a pattern and going with what I fantasize as a sort of arcade (but mild and quieter) - not really but let's pretend; a smaller canvas may result "downgraded" if the user is (most likely) used to full-screened content, yet I truly do find this format nostalgic and simple - fitting my project.
@@ -81,3 +81,19 @@ Basic set up:
 - set up very basic settings in main script such as canvas size, bg color (a dark grey > again, 'aesthetics');
 - set up states (they'll probably be subjected to change throughout the project); it personally helps me in having a very basic skeleton/bigger picture before tackling the single more specific tasks.
 - set up avatar as Class; directed by the arrow keys, it possesses both an idle icon and moving animation (currently under construction, so for now it's only creepy and irrelevant .pngs) and is constrained to the canvas. This, however, might change - after all, the avatar will mostly move within the wagons which, in turn, will...'expand', so yeah, the constraining method might be removed further ahead.
+
+-19/09-\
+Intro State set up:\
+|Rant, Description & Updates|\
+Although I wasn't necessarily aiming for a '1st person screen layout', it did end up being the set up for the project. Just a shy introduction to the program, yet crucial for several reasons - among those, giving precious (though quite subtle) context to the player, as well as, hopefully, allowing for a more engaging experience. At first, I wanted to create a defined line between introduction and simulation (game within the game) and thought of doing so by maybe setting up a room(living room/desk/whatever) or smth where the player could, via a device, play the game. Yet I'm much happier with these aesthetics and dynamics:\
+- the program starts with this 'game' already downloading on the user's device screen (1st pov - no material surroundings and barely a 'desktop' to speak of); some snippets/captions (I'm not sure what to call them) about the game appear/alternate on the same window in the meantime (this concept was 200% burrowed from the sims loading menus);
+- eventually, 2 icons will pop up, and, if clicked/accessed by the user, will lead to two chats - aka what I'm hoping to be key context sources - among a deceased family member (grandma/aunt/whatever) and a live one(a bother? idk);
+- when the download is complete, the chats close and the screen changes for the game "runs" automatically.
+
+Visually/experience-wise, I intend for many things (the game downloading and kind of introducing itself as well as two conversations) to go on at the same time, for different reasons:
+- multitasking/multiple open windows is already an increasingly common practice in the present, so I can only imagine how it will amplify in the future;
+- I want to give it a bit of a "cursed" vibe - or rather, I want to create a framework saturated with information, but subtly; windows and texts will kind of overlap (not _tremendously_ so - but still), so the user has many quiet voices requiring attention at once. On that note, I also personally find interesting seeing which sections the user would prioritize. I am still undecided whether the user is in control of the order of the windows - in other words, if they have the possibility to bring forward/send backward a window in order to prioritize another one (exactly like a real desktop would behave).
+
+Aesthetic-wise, I opted for _extremely_ simple set up.
+
+I still haven't included the actual texts/conversations (that will be a separate update/class/etc). On another (random) note, I opted to create a major class (in this case, an entire state) with multiple (a bit repetitive) elements within, rather than having many small classes. Not sure if I'll keep this strategy, might be interesting to bring up during meeting.
