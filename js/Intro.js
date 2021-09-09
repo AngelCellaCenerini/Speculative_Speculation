@@ -195,20 +195,10 @@ class Intro {
     text(`.`, this.gameWindowX + this.gameWindowX/4, this.gameWindowY - this.gameWindowY/6);
     // Description
     // Create seperate Class (Dialogues/JSON)
-//     push();
-//     textAlign(LEFT);
-//     textSize(16);
-//     text(`Experience the sincerity of old friendships
-// and the sweet lullaby of true grief.`, this.gameWindowX/2, this.gameWindowY);
-//     pop();
-    // Progress Bar
-    // this.startBarTimer++;
-    // if ( this.startBarTimer > 4*60){
       push();
       rectMode(CORNER);
       rect(this.gameWindowX - 156, this.gameWindowY + 58, this.currentProgress, this.gameWindowHeight/15, this.radius);
       pop();
-    // }
 
     // Borders
     noFill();

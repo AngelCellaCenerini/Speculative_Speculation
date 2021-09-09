@@ -30,11 +30,24 @@ let avatar = undefined;
 let avatarImage = undefined;
 let avatarAnimation = undefined;
 
+// States
 // Intro State
 let intro = undefined;
+// Title Screen State
+let titleScreen = undefined;
+let smokeClouds = [];
+let smokeClouds2 = [];
+const NUM_SMOKE_CLOUDS = 80;
+// Train Tracks //
+let trainTracks = undefined;
+// Train //
+let train = undefined;
+let trainImage = undefined;
+// Flashing Red Lights //
+let redLights = undefined;
 
 // States
-let state = 'intro'; // Intro, TitleScreen, Wagons(4), Ending - OOP will construct the states
+let state = 'titleScreen'; // Intro, TitleScreen, Wagons(3), Ending - OOP will construct the states
 
 /**
 Preloading .json file (dialogues) & graphic elements
@@ -44,6 +57,7 @@ function preload() {
   // Visual Elements
   avatarImage = loadImage(`assets/images/temporary_avatar.png`);
   avatarAnimation = loadImage(`assets/images/temporary_animation.png`);
+  trainImage = loadImage(`assets/images/temporary_train.png`);
 }
 
 /**
@@ -74,6 +88,24 @@ function setup() {
   // States
   // Set Intro State
   intro = new Intro();
+  // Set Title Screen State
+  titleScreen = new TitleScreen();
+  // Smoke
+  // Set Up "Smoke Particles/Clouds"
+  for (let i = 0; i < NUM_SMOKE_CLOUDS; i++) {
+    smokeClouds[i] = new Smoke(random(-50, 2*width/5), random(-100, 3*height/2), random(20, 40));
+  }
+  for (let i = 0; i < NUM_SMOKE_CLOUDS; i++) {
+    smokeClouds2[i] = new Smoke(random(3*width/5, width), random(-100, 3*height/2), random(20, 40));
+  }
+
+  //Train Tracks
+  let highlightsX = random(-150, -50);
+  trainTracks = new TrainTracks(highlightsX);
+  //Train
+  train = new Train(trainImage);
+  // Red Flashing Lights
+  redLights = new RedLights();
 
 }
 
@@ -91,15 +123,24 @@ function draw() {
     // Run Intro State
     intro.update(cursor);
 
+    // Customized Cursor (only in "desktop")
+    cursor.display();
+
     // Fade In Effect
-    // (needs to stay utop all "layers", hence why written last)
+    // (needs to stay on top of all "layers", hence why written last)
     fadeEffect();
 
   }
   else if ( state === 'titleScreen' ){
 
+    // Run Title Screen State
+    titleScreen.update(smokeClouds, smokeClouds2, trainTracks, train, redLights);
+
   }
   else if ( state === 'firstWagon' ){
+
+    // Train Tracks (Highlights should simulate movement)
+    trainTracks.update();
 
     // Run Avatar
     avatar.update();
@@ -107,19 +148,25 @@ function draw() {
   }
   else if ( state === 'secondWagon' ){
 
+    // Train Tracks (Highlights should simulate movement)
+    trainTracks.update();
+
+    // Run Avatar
+    avatar.update();
+
   }
   else if ( state === 'thirdWagon' ){
 
-  }
-  else if ( state === 'fourthWagon' ){
+    // Train Tracks (Highlights should simulate movement)
+    trainTracks.update();
+
+    // Run Avatar
+    avatar.update();
 
   }
   else if ( state === 'ending' ){
 
   }
-
-  // Customized Cursor (throughout)
-  cursor.display();
 
 }
 
@@ -144,4 +191,9 @@ function fadeEffect(){
 function mouseIsPressed(){
   // Check/React if Mouse is Pressed in Intro State
   intro.update(cursor);
+}
+
+function keyPressed(){
+  // Check Keyboar Input for Title Screen State
+  titleScreen.keyIsPressed(trainTracks);
 }

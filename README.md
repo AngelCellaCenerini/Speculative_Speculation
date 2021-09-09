@@ -82,7 +82,7 @@ Basic set up:
 - set up states (they'll probably be subjected to change throughout the project); it personally helps me in having a very basic skeleton/bigger picture before tackling the single more specific tasks.
 - set up avatar as Class; directed by the arrow keys, it possesses both an idle icon and moving animation (currently under construction, so for now it's only creepy and irrelevant .pngs) and is constrained to the canvas. This, however, might change - after all, the avatar will mostly move within the wagons which, in turn, will...'expand', so yeah, the constraining method might be removed further ahead.
 
--19/09-\
+-19/08-\
 Intro State set up:\
 |Rant, Description & Updates|\
 Although I wasn't necessarily aiming for a '1st person screen layout', it did end up being the set up for the project. Just a shy introduction to the program, yet crucial for several reasons - among those, giving precious (though quite subtle) context to the player, as well as, hopefully, allowing for a more engaging experience. At first, I wanted to create a defined line between introduction and simulation (game within the game) and thought of doing so by maybe setting up a room(living room/desk/whatever) or smth where the player could, via a device, play the game. Yet I'm much happier with these aesthetics and dynamics:\
@@ -97,3 +97,17 @@ Visually/experience-wise, I intend for many things (the game downloading and kin
 Aesthetic-wise, I opted for _extremely_ simple set up.
 
 I still haven't included the actual texts/conversations (that will be a separate update/class/etc). On another (random) note, I opted to create a major class (in this case, an entire state) with multiple (a bit repetitive) elements within, rather than having many small classes. Not sure if I'll keep this strategy, might be interesting to bring up during meeting.
+
+-25/08 - 09/09-\
+Title Screen State set up:\
+|Rant, Description & Updates| - BOY OH BOY DO I HAVE A RANT\
+Although I do plan to only commit changes to GitHub when major updates (aka states or major components - such as the dialogues/texts), this one was _ridiculous_. It took me 2 days to build a state that in the end I was not satisfied with, so ended up re-doing in 3 hours. Life is good :)))))))))))\
+Somehow - for this project at least -, it feels like the mechanics of the program should be in tune with its (envisioned) atmosphere - that is to say, smooth and simple, and hopefully elegant-like. In this case, specifically, I had built a set up & visuals that had many steps to accomplish a fairly simple scheme. To better try to explain, it felt like inserting too many 'anchor points' when drawing a vector; too many and the lines looses its smoothness. The same effect had the first version of the Title Screen set up; too many steps here and there produced a noisy (and 'laggy', if that makes sense) final product - personally, at least (I'm building this so I get to decide what feels right and what doesn't XD). And as sometimes happens with coding, it can feel easier to simply start from scratch than trying to understand what doesn't work (in a 'visual' sense - the code worked as it was supposed to I swear haha, it was just not projecting the envisioned vibe).
+SO, this version (that I do prefer over the first one) includes:
+- Title Screen with title(shocking, I know) and floating smoke clouds (generous way to describe circles). User presses SPACEBAR to start game - particularly a 'cutscene' of sorts: train tracks and flashing red lights appear and train decelerates (yea, I put effort into those physics), opens/closes door, and restarts (cue acceleration). Coding-wise:
+- classes: state class, train(currently ugly stolen image, though I do plan to "build" its aesthetics via p5 geometry), train tracks, flashing red lights, and "smoke clouds" (they look more like bubbles, but it's a quite simplified version of smoky clouds originating from the train - but also a metaphor for something else hehe); of course, all classes are intertwined with one another, and all are called in the Title Screen State/Class.
+- the title screen (which title is definitely temporary - I am _not_ calling it "choof choof") functions as mostly a cut-scene (aka - TIMERS) and should introduce the concept/metaphor of the train/journey. Hopefully, this way it appears as subtle as I intended.
+
+This minor update required way too much time, but I feel it important to document all ups and downs of my work.
+
+As a random note, I think I'll reduce the numbers of featured "wagons" from 4 to 3, for it fits best with the overall vibe of the project (I do want it to be a one-sitting experience; I also have very defined visions for the wagons) and it's less time-consuming :3
