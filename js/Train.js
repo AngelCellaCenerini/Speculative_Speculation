@@ -20,22 +20,33 @@ class Train {
     this.doorActive = false;
     this.image = image;
     this.stallingTime = 0;
+    this.timer = 0;
   }
 
   update(trainTracks){
-    // Default Behaviour
-    this.move();
-    this.accelerate();
-    this.stopping(trainTracks);
-    this.restarting(trainTracks);
-    this.manageDoor();
-    this.display();
+    // Start Timer
+    this.timer++;
+    // Wait Timer
+    if(this.timer > 2.5*60){
+      // Default Behaviour
+      this.move();
+      this.accelerate();
+      this.stopping(trainTracks);
+      this.restarting(trainTracks);
+      this.manageDoor();
+      this.display();
+    }
   }
 
   move(){
     // Move Train (along tracks)
     this.x += this.vx;
     this.vx = this.speed;
+    // Change State when Train has gone Off-Screen
+    if(this.x <= -500){
+      // Change State
+      state = `firstWagon`;
+    }
     // Keep ready to Move Train Door
     this.doorY += this.vy;
     this.vy = this.doorSpeed;

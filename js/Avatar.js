@@ -9,7 +9,7 @@ class Avatar {
     this.size = 38;
     this.vx = 0;
     this.vy = 0;
-    this.speed = 4;
+    this.speed = 2;
 
   }
 
@@ -60,8 +60,8 @@ class Avatar {
 
   confine(){
     // Constrain Avatar to (Restricted) Canvas
-    this.x = constrain(this.x, 10, 752);
-    this.y = constrain(this.y, 10, 557);
+    // this.x = constrain(this.x, 10, 752);
+    // this.y = constrain(this.y, 10, 557);
   }
 
   display(){

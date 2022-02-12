@@ -45,9 +45,13 @@ let train = undefined;
 let trainImage = undefined;
 // Flashing Red Lights //
 let redLights = undefined;
+// First Wagon State
+let firstWagon = undefined;
+// First Space
+let firstSpace = undefined;
 
 // States
-let state = 'titleScreen'; // Intro, TitleScreen, Wagons(3), Ending - OOP will construct the states
+let state = 'firstSpace'; // Intro, TitleScreen, Wagons(3), Ending - OOP will construct the states
 
 /**
 Preloading .json file (dialogues) & graphic elements
@@ -88,6 +92,7 @@ function setup() {
   // States
   // Set Intro State
   intro = new Intro();
+
   // Set Title Screen State
   titleScreen = new TitleScreen();
   // Smoke
@@ -98,7 +103,6 @@ function setup() {
   for (let i = 0; i < NUM_SMOKE_CLOUDS; i++) {
     smokeClouds2[i] = new Smoke(random(3*width/5, width), random(-100, 3*height/2), random(20, 40));
   }
-
   //Train Tracks
   let highlightsX = random(-150, -50);
   trainTracks = new TrainTracks(highlightsX);
@@ -106,6 +110,12 @@ function setup() {
   train = new Train(trainImage);
   // Red Flashing Lights
   redLights = new RedLights();
+
+  // First Wagon State
+  firstWagon = new FirstWagon();
+  // First Space
+  firstSpace = new FirstSpace();
+
 
 }
 
@@ -139,9 +149,16 @@ function draw() {
   }
   else if ( state === 'firstWagon' ){
 
-    // Train Tracks (Highlights should simulate movement)
-    trainTracks.update();
+    // Run State - First Wagon
+    firstWagon.update(avatar, trainTracks);
+    // Run Avatar
+    avatar.update();
 
+  }
+  else if ( state === 'firstSpace' ){
+
+    // Run State - First Open State
+    firstSpace.update();
     // Run Avatar
     avatar.update();
 

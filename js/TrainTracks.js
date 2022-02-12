@@ -5,7 +5,7 @@ class TrainTracks{
     this.highlightsX = highlightsX;
     this.resetHighlightsX = undefined;
     this.lenght = 850;    // Tracks Lenght
-    this.width = 30;      // Highlights Width
+    this.width = 35;      // Highlights Width
     this.height = 5;      // Tracks & Highlights Height
     this.vx = 0;
     this.vy = 0;
@@ -54,14 +54,14 @@ class TrainTracks{
     push();
 
     // Tracks
-    fill(150);
+    fill(130);
     let difference = 40;
-    rect(this.x, this.y - difference, this.lenght, this.height);
+    rect(this.x, this.y - 2*difference, this.lenght, this.height);
     rect(this.x, this.y, this.lenght, this.height);
 
     // Highlights - Tracks Details (one per track)
-    fill(195);
-    rect(this.highlightsX - difference, this.y - difference, this.width, this.height);
+    fill(200);
+    rect(this.highlightsX - difference, this.y - 2*difference, this.width, this.height);
     rect(this.highlightsX, this.y, this.width, this.height);
 
     pop();
